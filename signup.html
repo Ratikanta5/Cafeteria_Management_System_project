@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        *{
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        background-image: url("project5.jpg");
+        background-size: 100% 740px;
+        font-family: 'Mulish', sans-serif;
+    
+    }
+    .contain{
+        width: 300px;
+        height: 400px;
+        background-color: black;
+        margin-left: 36%;
+        margin-top: 7%;
+        text-align: center;
+        color: white;
+    
+    }
+    
+    .contain h1{
+        font-size: 36px;
+        color: aqua;
+    }
+    .contain .text
+    {
+        position: relative;
+        top: 7%;
+    
+    
+    }
+    .inp1{
+        border: none;
+        background-color: black;
+        border-bottom: 2px solid white;
+        width: 250px;
+        font-size: 20px;
+        margin-top: 40px;
+        outline: none;
+        color: white;
+    }
+    .inp2{
+        border: none;
+        background-color: black;
+        border-bottom: 2px solid white;
+        width: 250px;
+        font-size: 20px;
+        margin-top: 40px;
+        outline: none;
+        color: white;
+    }
+    .text button{
+        width: 250px;
+        height: 44px;
+        background-color: aqua;
+        color: black;
+        border: none;
+        font-size: 24px;
+        border-radius: 25px;
+        margin-top: 20px;
+    
+    }
+    
+    button:hover {
+        border: 3px solid aqua;
+        color: white;
+        font-size: 20px;
+        background-color: black;
+      }
+    
+    p
+    {
+        margin-top: 30px;
+        font-size: 20px;
+    
+    }
+    p span
+    {
+        color: aqua;
+    }
+    #Terms
+    {
+        margin-top: 30px ;
+    }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="text">
+            <h1>Sign Up</h1>
+            <input class="inp1" id="username" type="text" placeholder="Enter YourName">
+            <input class="inp2" id="password" type="password" placeholder="Enter Password">
+            <input class="inp2" id="confirmPassword" type="password" placeholder="Confirm Password">
+            <section id="Terms">
+                <input type="checkbox" id="termsCheckbox">
+                <span class="checkmark"></span>
+                I agree to the <a href="Terms.html">Terms and Conditions</a>.
+            </section>
+            <button onclick="saveUserData()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function saveUserData() {
+            // Get input values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var agreedToTerms = document.getElementById("termsCheckbox").checked;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Check if terms are agreed to
+            if (!agreedToTerms) {
+                alert("Please agree to the terms and conditions.");
+                return;
+            }
+
+            // Create user object
+            var user = {
+                username: username,
+                password: password
+            };
+
+            // Convert user object to JSON string
+            var userData = JSON.stringify(user);
+
+            // Save user data to local storage
+            localStorage.setItem("user", userData);
+
+            // Inform the user
+            alert("Sign up successful!");
+
+            // Redirect or do other actions as needed
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

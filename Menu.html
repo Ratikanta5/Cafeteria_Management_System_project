@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <style>
+    body {
+      background-color: gray;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      padding: 10px; /* Added padding for spacing */
+      z-index: 1000; /* Ensure navbar appears above other elements */
+    }
+    #navbar ul li {
+  display: inline-block;
+  margin-right: 80px;
+}
+#navbar ul li:nth-child(1) { /* Select the first list item, which corresponds to Breakfast */
+  margin-left: 200px;
+  /* Add a right margin of 80px */
+}
+#navbar ul li:nth-child(2) { /* Select the first list item, which corresponds to Breakfast */
+  margin-left: 350px; /* Add a right margin of 80px */
+}
+#navbar ul li:nth-child(3) { /* Select the first list item, which corresponds to Breakfast */
+  margin-left: 350px; /* Add a right margin of 80px */
+}
+#navbar ul li:nth-child(4) { /* Select the first list item, which corresponds to Breakfast */
+  margin-left: 100px; /* Add a right margin of 80px */
+}
+#navbar ul li:nth-child(5) { /* Select the first list item, which corresponds to Breakfast */
+  margin-left: 50px; /* Add a right margin of 80px */
+}
+
+#navbar ul li:last-child {
+  margin-right: 0;
+}
+
+    #navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+    }
+
+    #navbar ul li {
+      margin-right: 20px;
+    }
+
+    #navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    #navbar img {
+      width: 30px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .menu-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .menu-column {
+      width: 30%;
+      float: left;
+      margin-right: 5%;
+    }
+
+    .menu-column:last-child {
+      margin-right: 0;
+    }
+
+    .menu-item {
+      margin-bottom: 20px;
+      padding: 10px;
+ 
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item img {
+      max-width: 60%;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    }
+
+    .menu-item h3 {
+      margin-top: 0;
+    }
+
+    .menu-item p {
+      margin-bottom: 0;
+    }
+
+    .menu-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #place-order-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  #place-order-btn:hover {
+    background-color: #45a049; /* Darker green */
+  }
+
+
+    @media (max-width: 768px) {
+      .menu-column {
+        width: 100%;
+        margin-right: 0;
+      }
+      .cart-container {
+  margin-top: 20px;
+  background-color: rgba(255, 0, 0, 0.5); /* Red background with some transparency */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    #cart-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #cart-list li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #cart-total {
+      font-weight: bold;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <ul>
+      <li><a href="#" class="nav-link">Breakfast</a></li>
+      <li><a href="#" class="nav-link">Lunch</a></li>
+      <li><a href="#" class="nav-link">Dinner</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-container">
+    <div class="menu-column">
+      <h2 class="menu-title"></h2>
+      <div class="menu-item">
+        <h3>Breakfast 1</h3>
+        <img src="breakfast1.jpg" alt="Dish 1" data-price="400.00">
+        <p>Price:400.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Breakfast 2</h3>
+        <img src="breakfast2.jpg" alt="Dish 2" data-price="600.00">
+        <p>Price:600.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Breakfast 3</h3>
+        <img src="breakfast3.jpg" alt="Dish 3" data-price="300.00">
+        <p>Price:300.00</p>
+      </div>
+    </div>
+  
+    <div class="menu-column">
+      <h2 class="menu-title"></h2>
+      <div class="menu-item">
+        <h3>Lunch 1</h3>
+        <img src="lunch1.jpg" alt="Dish 1" data-price="200.00">
+        <p>Price:200.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Lunch 2</h3>
+        <img src="lunch2.jpg" alt="Dish 2" data-price="1000.00">
+        <p>Price:1,000.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Lunch 3</h3>
+        <img src="lunch3.jpg" alt="Dish 3" data-price="350.00">
+        <p>Price:350.00</p>
+      </div>
+    </div>
+  
+    <div class="menu-column">
+      <h2 class="menu-title"></h2>
+      <div class="menu-item">
+        <h3>Dinner 1</h3>
+        <img src="dinner1.jpg" alt="Dish 1" data-price="300.00">
+        <p>Price:300.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Dinner 2</h3>
+        <img src="dinner2.jpg" alt="Dish 2" data-price="320.00">
+        <p>Price:320.00</p>
+      </div>
+      <div class="menu-item">
+        <h3>Dinner 3</h3>
+        <img src="dinner3.jpg" alt="Dish 3" data-price="450.00">
+        <p>Price:450.00</p>
+      </div>
+    </div>
+  </div>
+  <div class="cart-container">
+    <h2>Cart</h2>
+    <ul id="cart-list"></ul>
+    <p>Total: <span id="cart-total">0.00</span></p>
+    <button id="place-order-btn">Place Order</button>
+  </div>
+
+  <script>
+   let cartCounter = 0;
+    let totalPrice = 0;
+    let cartItems = [];
+
+    function addToCart(itemName, itemPrice) {
+      cartCounter++;
+      totalPrice += parseFloat(itemPrice);
+      document.getElementById('cart-total').textContent = cartCounter;
+      cartItems.push({ name: itemName, price: parseFloat(itemPrice) });
+      updateCartList();
+    }
+
+    function updateCartList() {
+      const cartList = document.getElementById('cart-list');
+      cartList.innerHTML = '';
+      cartItems.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name}: $${item.price.toFixed(2)}`;
+
+        // Add remove button
+        const removeBtn = document.createElement('span');
+        removeBtn.textContent = '❌';
+        removeBtn.classList.add('remove-btn');
+        removeBtn.addEventListener('click', function() {
+          removeItem(index);
+        });
+
+        listItem.appendChild(removeBtn);
+        cartList.appendChild(listItem);
+      });
+      document.getElementById('cart-total').textContent = totalPrice.toFixed(2);
+    }
+
+    document.querySelectorAll('.menu-item img').forEach(img => {
+      img.addEventListener('click', function() {
+        const itemName = this.parentElement.querySelector('h3').textContent;
+        const itemPrice = this.getAttribute('data-price');
+        addToCart(itemName, itemPrice);
+      });
+    });
+
+    document.getElementById('place-order-btn').addEventListener('click', placeOrder);
+
+    function placeOrder() {
+      if (cartItems.length === 0) {
+        alert("Your cart is empty. Please add items before placing an order.");
+        return;
+      }
+
+      // Ask for table number
+      const tableNumber = prompt("Please enter your table number:");
+
+      // Check if the user entered a table number
+      if (!tableNumber) {
+        alert("Table number is required.");
+        return;
+      }
+
+      // Simulate payment process
+      const paymentMethod = prompt("Please select your payment method (Cash/Card):");
+
+      // Check if the user entered a payment method
+      if (!paymentMethod) {
+        alert("Payment method is required.");
+        return;
+      }
+
+      // Perform payment processing (simulate payment)
+      // This is where you would typically send payment information to a server for processing
+      
+      // If payment is successful, show order success message
+      alert("Payment successful! Your order will be served to table " + tableNumber);
+
+      // Reset cart and counters
+      cartCounter = 0;
+      totalPrice = 0;
+      cartItems = [];
+      updateCartList();
+      document.getElementById('cart-total').textContent = cartCounter;
+
+    }
+
+    function removeItem(index) {
+      const removedItem = cartItems.splice(index, 1)[0];
+      totalPrice -= removedItem.price;
+      cartCounter--;
+      updateCartList();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url("project5.jpg");
+    background-size: 100% 740px;
+    font-family: 'Mulish', sans-serif;
+
+}
+.contain{
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    margin-left: 36%;
+    margin-top: 7%;
+    text-align: center;
+    color: white;
+
+}
+
+.contain h1{
+    font-size: 36px;
+    color: aqua;
+}
+.contain .text
+{
+    position: relative;
+    top: 7%;
+
+}
+.inp1{
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    width: 250px;
+    font-size: 20px;
+    margin-top: 40px;
+    outline: none;
+    color: white;
+}
+.inp2{
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    width: 250px;
+    font-size: 20px;
+    margin-top: 40px;
+    outline: none;
+    color: white;
+}
+.text button{
+    width: 250px;
+    height: 44px;
+    background-color: aqua;
+    color: black;
+    border: none;
+    font-size: 24px;
+    border-radius: 25px;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    border: 3px solid aqua;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+  }
+
+p
+{
+    margin-top: 30px;
+    font-size: 20px;
+
+}
+p span
+{
+    color: aqua;
+}
+
+
+/* for signUP pages */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url("project5.jpg");
+    background-size: 100% 740px;
+    font-family: 'Mulish', sans-serif;
+
+}
+.contain{
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    margin-left: 36%;
+    margin-top: 7%;
+    text-align: center;
+    color: white;
+
+}
+
+.contain h1{
+    font-size: 36px;
+    color: aqua;
+}
+.contain .text
+{
+    position: relative;
+    top: 7%;
+
+}
+.inp1{
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    width: 250px;
+    font-size: 20px;
+    margin-top: 40px;
+    outline: none;
+    color: white;
+}
+.inp2{
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    width: 250px;
+    font-size: 20px;
+    margin-top: 40px;
+    outline: none;
+    color: white;
+}
+.text button{
+    width: 250px;
+    height: 44px;
+    background-color: aqua;
+    color: black;
+    border: none;
+    font-size: 24px;
+    border-radius: 25px;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    border: 3px solid aqua;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+  }
+
+p
+{
+    margin-top: 30px;
+    font-size: 20px;
+
+}
+p span
+{
+    color: aqua;
+}
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="text">
+            <h1>Login</h1>
+            <input class="inp1" type="text" id="username" placeholder="Enter UserName">
+            <input class="inp2" type="password" id="password" placeholder="Enter Password">
+            <p><a href="Forgot.html">Forgot Password?</a></p>
+            <button onclick="login()">Login</button>
+                  <p>Not a member? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Retrieve user data from local storage
+            var userData = localStorage.getItem("user");
+
+            if (userData) {
+                // Parse JSON string to object
+                var user = JSON.parse(userData);
+
+                // Check if the provided username and password match the saved data
+                if (user.username === username && user.password === password) {
+                    alert("Login successful!");
+                    window.location.href = "backend.html";
+                    // Redirect the user to a different page or perform other actions
+                } else {
+                    alert("Invalid username or password.");
+                }
+            } else {
+                alert("No user data found. Please sign up first.");
+            }
+        } 
+    </script>
+</body>
+</html>

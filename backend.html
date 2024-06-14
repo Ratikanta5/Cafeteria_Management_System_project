@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* hero section */
+    body {
+      background-image: url("project5.jpg");
+      background-size: cover;
+      margin: 0; /* Added to remove default margin */
+    }
+    
+    #hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh; /* Corrected typo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #hero-content {
+      position: absolute;
+      top: 8%;
+    }
+    
+    #hero-content h1 {
+      color: #fff;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 2px #000;
+    }
+    
+    #hero-content h2 {
+      color: #fff;
+      font-size: 2rem;
+      font-family: cursive;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+      text-shadow: 2px 2px 2px #000;
+    }
+    
+    #hero-content a {
+      color: #fff;
+      padding: 3px 20px 3px 20px;
+      border: 1px solid orange;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+    
+    #hero-content a:hover {
+      background: navy;
+    }
+
+    /* navigation bar */
+    #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 10px; /* Added padding for spacing */
+  z-index: 1000; /* Ensure navbar appears above other elements */
+}
+
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+#navbar ul li {
+  margin-right: 20px;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#navbar ul li a:hover {
+  color: orange;
+}
+#navbar img {
+      height: 40px; 
+      width: 40px; 
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    /* menu section */
+
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <img src="logocaf.jpg" alt="Logo"> 
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="help.html">Help & Support</a></li>
+    </ul>
+  </div>   
+
+<div id="hero">
+  <div id="hero-content">
+    <h1>Cafeteria</h1>
+    <h2>Best Quality Tasty Food Point</h2>
+    <a href="Menu.html">Menu</a>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

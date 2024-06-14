@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body
+    {
+        margin: 0%;
+        padding: 0%;
+        background-image: url("project5.jpg");
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Terms-box
+    {
+        max-width: 460px;
+        background-color: black;
+        color: #fff;
+        font-family: "Montserrat";
+        padding: 60px 30px;
+    }
+    .Terms-text{
+        padding: 0 20px;
+        height: 400px;
+        overflow-y: auto;
+        font-size: 14px;
+
+    }
+    .Terms-box h4 span{
+        color: red;
+
+    }
+    .button
+    {
+        display: flex;
+        padding: 0 20px;
+    justify-content: space-between;
+    }
+    .red-btn{
+        background-color: red;
+    }
+
+</style>
+</head>
+<body>
+    <div class="Terms-box">
+
+        <div class="Terms-text">
+            <h1>Terms of Services</h1>
+            <p>Last Edit: 14-04-24</p>
+<p>Greetings Users.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam dolores sequi in ex aperiam deleniti consequuntur optio laboriosam ea maiores nobis non, exercitationem tempora id vitae fugiat dicta a est repellendus mollitia temporibus. Illum quia, itaque cum aliquam inventore maxime dignissimos harum corrupti laboriosam. Consequatur facere debitis accusamus odit?</p>    
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium perspiciatis expedita natus, vel quis impedit alias veritatis recusandae iure nobis omnis soluta aliquam velit quae quam ab harum numquam ratione a perferendis eos at. Exercitationem commodi suscipit sapiente voluptas impedit.</p>        
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente at, saepe sed eaque ratione vitae aspernatur cupiditate exercitationem optio facere! A reprehenderit omnis assumenda harum odit quaerat! Quaerat, nemo aut!    
+</div>
+<h4>I Agree to the <span>Terms and Service</span> and i read the privacy Notice.</h4>
+<div class="button">
+    <button class="red-btn" id="acceptBtn">Accept</button>
+    <button class="gray-btn">Decline</button>
+</div>
+
+<script>
+    // Add event listener to the Accept button
+    document.getElementById("acceptBtn").addEventListener("click", function() {
+        // Redirect to the signup page
+        window.location.href = "signup.html";
+    });
+</script>
+
+</div>
+</body>
+</html>
