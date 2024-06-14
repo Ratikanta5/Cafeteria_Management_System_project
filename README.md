@@ -36,4 +36,5 @@ Contact
 -------
 
 For any questions or inquiries, please contact [Ratikanta Mohanty] at [ratikantamohanty924@gmail.com].
+
 LinkedIn: [Ratikanta Mohanty](www.linkedin.com/in/ratikanta-mohanty7606-b20436242)
